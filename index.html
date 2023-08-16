@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styling/style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        // no import necessary
+        gsap.to("body", { backgroundColor: "red", duration: 3 });
+    </script>
+
+
+    <title>iTale.ai</title>
+</head>
+
+<body>
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <div>
+        <!-- ==================== navbar ============================== -->
+        <nav class="hidden lg:block">
+            <ul class="flex px-10 justify-between items-center py-10">
+                <div class="ml-4">
+                    <li class="w-1/2"><a href=""><img src="./assets/images/iTale.ai.png" alt="cryptoAI"></a></li>
+                </div>
+                <div class="flex text-white">
+                    <li class="relative flex-col"><a class="mx-5 text-red" href="">Home</a>
+                    </li>
+                    <li><a class="mx-5 text-gray" href="">Features</a></li>
+                    <li><a class="mx-5 text-gray" href="">Pricing</a></li>
+                    <li><a class="mx-5 text-gray" href="">Contact</a></li>
+                </div>
+                <div class="flex items-center">
+                    <div>
+                        <button class="rounded-xl px-8 py-2 bg-white text-black mx-8">Login</button>
+                        <button class="rounded-xl px-8 py-2  red-bg text-white">Sign Up</button>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- ==================== mobile-menu =============== -->
+        <!-- Mobile menu button-->
+        <div class=" bg-black py-4 px-5 flex justify-between items-center lg:hidden">
+            <!-- Mobile menu button-->
+            <div>
+                <div>
+                    <li class="w-1/2 flex items-center"><a href=""><img src="./assets/images/iTale.ai.png"
+                                alt="cryptoAI"></a></li>
+                </div>
+            </div>
+            <button onclick="menuToggle()" type="button"
+                class="inline-flex items-center justify-center rounded-md p-2 text-white bg-gray-500 hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <svg class="block h-6 text-white bg-gray-500  w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="">
+            <div class=" text-center mt-4 overlay" id="mobile-menu">
+                <a href="javascript:void(0)" onclick="menuClose()"
+                    class="closebtn text-6xl absolute top-4 right-4 mr-10 font-semibold text-white ">&times;</a>
+                <div class="space-y-1 mt-16 px-2 pt-2 pb-3">
+                    <a href="./home.html"
+                        class="hover:bg-gray-900 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Home</a>
+
+                    <a href="./about.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</a>
+
+                    <a href="./services.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+
+
+                    <a href="./contactus.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact
+                        us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== hero-section ======================= -->
+
+        <div>
+            <div class="text-white flex justify-center container mx-auto">
+                <div class="text-center relative my-28 w-4/5">
+                    <div class="absolute right-36 top-0"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute right-0 top-5"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute left-0 top-10"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute right-0 top-20"><img class="w-8" src="./assets/images/Star-1.png" alt=""></div>
+                    <div class="absolute left-14 top-[-50px]"><img class="w-8" src="./assets/images/Star-3.png" alt="">
+                    </div>
+                    <p class="lg:text-xl text-gray">The #1 Platform for making high quality AI Stories in seconds!</p>
+                    <div class="mt-5">
+                        <h1 class="text-white gilmer-medium text-2xl lg:text-7xl">Create AI Stories With Your favorite
+                            Characters!
+                        </h1>
+                    </div>
+                    <div class="flex mt-7 justify-center items-center">
+                        <div>
+                            <button class="rounded-xl px-8 py-2  red-bg text-white">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="flex mt-10 relative justify-center">
+                        <div class="absolute lg:left-[-100px] left-0"><img class="lg:w-48 w-16"
+                                src="./assets/images/left-circle.png" alt=""></div>
+                        <div class="absolute left-0 bottom-20"><img class="w-8" src="./assets/images/Star-1.png" alt="">
+                        </div>
+                        <div class="absolute lg:right-[-120px] right-0"><img class="lg:w-48 w-16"
+                                src="./assets/images/circle-with-scale.png" alt=""></div>
+                        <img class="w-2/5" src="./assets/images/obama.png" alt="obama">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= tranding-ai-store ======================== -->
+
+        <div>
+            <div class="container mx-auto">
+                <h2 class="text-white gilmer-medium text-2xl text-center">Trending AI Stories</h2>
+            </div>
+
+        </div>
+
+        <!-- slider -->
+        <div class="container mx-auto">
+            <div>
+                <div class="flex justify-between">
+                    <button class="prev outline-none"><img src="./assets/images/arrow-back.png" alt=""></button>
+                    <button class="next"><img src="./assets/images/arrow-next.png" alt=""></button>
+                </div>
+                <button class="toggle">toggle overflow</button>
+                <div class="wrapper">
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/elon.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/donald.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/fle.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/elon.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/donald.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img class="w-3/5" src="./assets/images/fle.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== charactor-to-create ================ -->
+        <div class="container mx-auto mt-24">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <h2 class="text-white text-xl lg:text-start text-center gilmer-bold">We have more than 100+<br />
+                    Character to create your Story
+                </h2>
+                <div class="mt-5 lg:mt-0">
+                    <button
+                        class="rounded-3xl px-10 py-2 bg-transparent text-white border-solid border-slate border mx-8">See
+                        all</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- =============== slider ===================== -->
+
+        <div class=" hidden">
+            <div class="flex relative gap-10 my-24">
+                <div class="w-2/5 opacity-70 h-96 bg-black right-0 absolute"></div>
+                <div class="w-2/5 opacity-70 h-96 bg-black absolute"></div>
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/cartoon.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/fire-man.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/black-men.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/singer.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/hat-girl.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ====================== carousel ========================================= -->
+    
+
+        <div class="slider my-10">
+            <div class="content">
+              <div class="slide-item">
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/cartoon.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+              </div>
+              <div class="slide-item active">
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/fire-man.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/black-men.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/singer.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <div class="flex justify-center text-center">
+                    <div>
+                        <div><img src="./assets/images/hat-girl.png" alt=""></div>
+                        <p class="text-white text-xl gilmer-medium">Elon Mask</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <div class="left"><</div>
+              <div class="right">></div>
+              <ul class="indicators"></ul>
+            </div>
+          </div>
+
+
+        <!-- =============== clone-yourself ===================== -->
+        <div class="light-bg py-10 mt-10 flex items-center">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div>
+                        <h2 class="text-white text-2xl gilmer-bold">Clone yourself into a story 👀</h2>
+                        <p class="text-gray text-sm mt-5">Create custom models on iTale now!</p>
+                    </div>
+                    <div class="mt-5 lg:mt-0">
+                        <button class="rounded-xl px-10 py-4 red-bg text-white mx-8">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================== plan-section ===================== -->
+        <div class="container mx-auto mt-16">
+            <div class="flex  justify-center lg:justify-start items-center">
+                <h2 class="text-white lg:text-4xl text-2xl text-center lg:text-start gilmer-medium">We’ve got a plan
+                    <br /> that’s perfect for you</h2>
+            </div>
+            <div class="flex px-3 flex-col lg:flex-row gap-3 mt-10 w-full">
+                <div
+                    class="text-white light-bg plan-card lg:w-1/3 px-10 py-3 border-slate-700 rounded-2xl border border-solid">
+                    <div>
+                        <p class="text-red pt-4">Basic</p>
+                        <p class="text-gray text-lg pt-4">Credits</p>
+                        <p class="flex items-center pt-4 gap-2"> <span class="text-xs">$</span> <span
+                                class="text-4xl gilmer-medium">8.99</span> <span class="text-sm">/ Per Month</span></p>
+                        <p class="text-xl line-through pt-4">$35</p>
+                    </div>
+                    <div class="flex my-10">
+                        <button class="rounded-xl w-full py-4 bg-gray text-white">Get Started</button>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>Credits Never Expire</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>One Time Purchase</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>25 Credits ( 5 Tales )</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>All Character Models</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="text-white plan-card bg-pink lg:w-1/3 px-10  border-slate-700 rounded-2xl border border-solid">
+                    <div>
+                        <p class="text-red pt-4">Basic</p>
+                        <p class="text-gray text-lg pt-4">Credits</p>
+                        <p class="flex items-center pt-4 gap-2"> <span class="text-xs">$</span> <span
+                                class="text-4xl gilmer-medium">24.99</span> <span class="text-sm">/ Per Month</span></p>
+                        <p class="text-xl line-through pt-4">$35</p>
+                    </div>
+                    <div class="flex my-10">
+                        <button class="rounded-xl w-full py-4 bg-white text-black">Get Started</button>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div><img src="./assets/images/light-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>Unlimited generation credits</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/light-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>All Character Models</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/light-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>Priority Queue</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/light-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="text-white plan-card light-bg lg:w-1/3 py-3 px-10 border-slate-700 rounded-2xl border border-solid">
+                    <div>
+                        <p class="text-red pt-4">Basic</p>
+                        <p class="text-gray text-lg pt-4">Credits</p>
+                        <p class="flex items-center pt-4 gap-2"> <span class="text-xs">$</span> <span
+                                class="text-4xl gilmer-medium">89.99</span> <span class="text-sm">/ Per Month</span></p>
+                        <p class="text-xl line-through pt-4">$35</p>
+                    </div>
+                    <div class="flex my-10">
+                        <button class="rounded-xl w-full py-4 bg-gray text-white">Get Started</button>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>3 monthly custom models</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>Early Access to Features</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>unlimited generation credits</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>All voice models</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>Priority Queue</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div><img src="./assets/images/green-tick.png" alt=""></div>
+                        <div class="ml-3">
+                            <p>24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================ frequently-question ====================== -->
+
+        <div class="container px-3 mx-auto my-24">
+            <div>
+                <div>
+                    <h2 class="text-white text-4xl gilmer-bold">Frequently asked questions</h2>
+                </div>
+                <div class="flex border-b border-slate-700 items-center mt-6">
+                    <div>
+                        <p class="text-xl gilmer-bold text-red">-</p>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-white">Can I cancel my plan at any time?</p>
+                    </div>
+                    <div class="border-b border-slate-700 mt-16"></div>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
+                </div>
+                <div class="flex border-b border-slate-700 items-center mt-6">
+                    <div>
+                        <p class="text-xl gilmer-bold text-red">+</p>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-white">Are credits a one time purchase?</p>
+                    </div>
+                    <div class="border-b border-slate-700 mt-16"></div>
+                </div>
+                <div class="flex border-b border-slate-700 items-center mt-6">
+                    <div>
+                        <p class="text-xl gilmer-bold text-red">+</p>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-white">Which plans allow me to create custom models?</p>
+                    </div>
+                    <div class="border-b border-slate-700 mt-16"></div>
+                </div>
+                <div class="flex border-b border-slate-700 items-center mt-6">
+                    <div>
+                        <p class="text-2xl gilmer-medium text-red">+</p>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-white">What is the essential Al vocal tool kit?</p>
+                    </div>
+                    <div class="border-b border-slate-700 mt-16"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== footer ======================== -->
+
+        <Footer class=" py-16">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="lg:w-3/5 flex justify-center lg:justify-start text-center lg:text-start py-4">
+                        <div>
+                            <div><img class="mx-auto lg:mx-0" width="96" src="./assets/images/iTale.ai.png" alt="logo">
+                            </div>
+                            <div class="mt-8">
+                                <p class="text-white">Social Media</p>
+                                <div class="flex gap-1">
+                                    <div><img class="w-12" src="./assets/images/instagram.png" alt=""></div>
+                                    <div><img class="w-12" src="./assets/images/youtube.png" alt=""></div>
+                                    <div><img class="w-12" src="./assets/images/titok.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="2/5">
+                        <nav class="flex lg:gap-6 flex-col text-center lg:text-start lg:flex-row justify-around">
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Links</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Pricing</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Login</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Sign Up</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Forgot Password</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">History</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">AI Models</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Drizzy AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Juice AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Kanye AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Ariana AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Travis AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Weeknd AI Model</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Legal</a></li>
+                                    <li class="mt-5  opacity-50"><a class="mx-5" href="">Terms of Use</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Privacy Policy</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Refund Policy</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="text-center border-t mt-5 border-gray-500 w-2/3">
+                        <p class="text-gray text-sm mt-4">© Copyright 2023 - ITale . Ai LTD</p>
+                    </div>
+                </div>
+            </div>
+        </Footer>
+
+    </div>
+    <script src="./assets/script/script.js"></script>
+    <script>
+        function menuToggle() {
+            var x = document.getElementById("mobile-menu");
+            x.style.width = "100%";
+        }
+        function menuClose() {
+            var x = document.getElementById("mobile-menu");
+            x.style.width = "0%";
+        }
+
+
+        var getIndex = function(el) {
+	arr = el.parentNode.children;
+	for (var i = 0, n = arr.length; i < n; i++) {
+		if (el === arr[i]) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+var setSlider = function(slider) {
+	var sliderContent = slider.getElementsByClassName("content")[0],
+		sliderItems = slider.getElementsByClassName('slide-item'),
+		sliderIndicators = slider.getElementsByClassName('indicators')[0],
+		left = slider.getElementsByClassName('left')[0],
+		right = slider.getElementsByClassName('right')[0],
+		i, n, el, changeActive;
+
+	changeActive = function(prev, next) {
+		sliderIndicators[prev].classList.remove("active-item");
+		sliderIndicators[next].classList.add("active-item");
+		if (sliderIndicators) {
+			sliderItems[prev].classList.remove("active");
+			sliderItems[next].classList.add("active");
+		}
+	}
+
+	if (sliderIndicators) {
+		for (i = 0, n = (sliderItems.length - 2); i < n; i++) {
+			el = document.createElement('li');
+			el.className = "item";
+			sliderIndicators.appendChild(el);
+		}
+		el = getIndex(sliderContent.getElementsByClassName("active")[0]);
+		sliderIndicators = document.getElementsByClassName('slider')[0].getElementsByClassName("item");
+		sliderIndicators[el].classList.add('active-item');
+		for (i = 0, n = sliderIndicators.length; i < n; i++) {
+			sliderIndicators[i].addEventListener("click", function() {
+				changeActive(getIndex(slider.getElementsByClassName("active-item")[0]), getIndex(this));
+			});
+		}
+	}
+	var leftChange = function() {
+		var prevIndex = getIndex(sliderContent.getElementsByClassName("active")[0]),
+			nextIndex = prevIndex - 1;
+		if (nextIndex === -1) {
+			nextIndex += sliderContent.getElementsByClassName('slide-item').length - 2
+		}
+		changeActive(prevIndex, nextIndex);
+	};
+	if (left) {
+		left.addEventListener("click", leftChange);
+	}
+
+	var rightChange = function() {
+		var prevIndex = getIndex(sliderContent.getElementsByClassName("active")[0]),
+			nextIndex = prevIndex + 1;
+		if (nextIndex >= sliderItems.length - 2) {
+			nextIndex = 0
+		}
+		changeActive(prevIndex, nextIndex);
+	};
+	if (right) {
+		right.addEventListener("click", rightChange);
+	}
+	var startX;
+	sliderContent.addEventListener('touchstart', function(e) {
+		startX = e.changedTouches[0].pageX;
+	});
+	sliderContent.addEventListener('touchend', function(e) {
+		if (startX < e.changedTouches[0].pageX) {
+			leftChange();
+		} else if (startX > e.changedTouches[0].pageX) {
+			rightChange();
+		}
+	});
+}
+
+window.addEventListener('load', function() {
+	setSlider(document.getElementsByClassName('slider')[0])
+});
+
+    </script>
+</body>
+
+</html>

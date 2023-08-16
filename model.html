@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styling/style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        // no import necessary
+        gsap.to("body", { backgroundColor: "red", duration: 3 });
+    </script>
+    <title>iTale.ai</title>
+</head>
+
+<body>
+    <div>
+        <!-- ==================== navbar ============================== -->
+        <nav class="hidden lg:block">
+            <ul class="flex px-10 justify-between items-center py-10">
+                <div class="ml-4">
+                    <li class="w-1/2"><a href=""><img src="./assets/images/iTale.ai.png" alt="cryptoAI"></a></li>
+                </div>
+                <div class="flex text-white">
+                    <li class="relative flex-col"><a class="mx-5 text-red" href="">Home</a>
+                    </li>
+                    <li><a class="mx-5 text-gray" href="">Features</a></li>
+                    <li><a class="mx-5 text-gray" href="">Pricing</a></li>
+                    <li><a class="mx-5 text-gray" href="">Contact</a></li>
+                </div>
+                <div class="flex items-center">
+                    <div>
+                        <button class="rounded-xl px-8 py-2 bg-white text-black mx-8">Login</button>
+                        <button class="rounded-xl px-8 py-2  red-bg text-white">Sign Up</button>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- ==================== mobile-menu =============== -->
+        <!-- Mobile menu button-->
+        <div class=" bg-black py-4 px-5 flex justify-between items-center lg:hidden">
+            <!-- Mobile menu button-->
+            <div>
+                <div>
+                    <li class="w-1/2 flex items-center"><a href=""><img src="./assets/images/iTale.ai.png"
+                                alt="cryptoAI"></a></li>
+                </div>
+            </div>
+            <button onclick="menuToggle()" type="button"
+                class="inline-flex items-center justify-center rounded-md p-2 text-white bg-gray-500 hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <svg class="block h-6 text-white bg-gray-500  w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="">
+            <div class=" text-center mt-4 overlay" id="mobile-menu">
+                <a href="javascript:void(0)" onclick="menuClose()"
+                    class="closebtn text-6xl absolute top-4 right-4 mr-10 font-semibold text-white ">&times;</a>
+                <div class="space-y-1 mt-16 px-2 pt-2 pb-3">
+                    <a href="./home.html"
+                        class="hover:bg-gray-900 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Home</a>
+
+                    <a href="./about.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Features</a>
+
+                    <a href="./services.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+
+
+                    <a href="./contactus.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact
+                        us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== hero-section ======================= -->
+
+        <div>
+            <div class="text-white flex justify-center container mx-auto">
+                <div class="text-center relative my-28 w-4/5">
+                    <div class="absolute right-36 top-0"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute right-0 top-5"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute left-0 top-10"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute left-14 top-[-50px]"><img class="w-8" src="./assets/images/Star-3.png" alt="">
+                    </div>
+                    <div class="mt-5">
+                        <h1 class="text-white gilmer-medium text-2xl lg:text-7xl">AI Characters Models
+                        </h1>
+                    </div>
+                    <div>
+                        <div class="light-bg mt-10 flex justify-between w-full py-4 px-5 rounded-2xl">
+                            <input class="bg-transparent w-full outline-none" type="text" placeholder="Search">
+                            <img src="./assets/images/search-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================== charactors-model =========================== -->
+        <div class="container mx-auto">
+            <div class="flex px-2 flex-wrap lg:gap-8 gap-1">
+                <div
+                    class="text-white flex lg:w-[30%] w-full flex-col justify-center light-bgl  px-10 py-5 border-slate-700 rounded-2xl border border-solid">
+                    <div><img class="mx-auto" src="./assets/images/person-circle-plus.png" alt=""></div>
+                    <p class="gilmer-medium text-xl">Clone yourself into a character</p>
+                </div>
+                <div style="background-image: url('./assets/images/elon-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/singer-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex light-bg items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/side-pose.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/black-men-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/hat-girl-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/girl-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/firemen-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/hat-men.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/cartoon-2.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/aroplane.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+                <div style="background-image: url('./assets/images/bald-men.png'); background-size: contain; background-repeat: no-repeat;min-height: 520px;"
+                    class="text-white lg:w-[30%] w-full flex items-end">
+                    <p class="text-white gilmer-medium text-center w-full text-4xl pb-12">Elon Mask</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- ===================== footer ======================== -->
+
+         <Footer class=" py-16">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="lg:w-3/5 flex justify-center lg:justify-start text-center lg:text-start py-4">
+                        <div>
+                            <div><img class="mx-auto lg:mx-0" width="96" src="./assets/images/iTale.ai.png" alt="logo"></div>
+                            <div class="mt-8">
+                                <p class="text-white">Social Media</p>
+                                <div class="flex gap-1">
+                                    <div><img class="w-12" src="./assets/images/instagram.png" alt=""></div>
+                                    <div><img class="w-12" src="./assets/images/youtube.png" alt=""></div>
+                                    <div><img class="w-12" src="./assets/images/titok.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="2/5">
+                        <nav class="flex lg:gap-6 flex-col text-center lg:text-start lg:flex-row justify-around">
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Links</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Pricing</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Login</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Sign Up</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Forgot Password</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">History</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">AI Models</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Drizzy AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Juice AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Kanye AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Ariana AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Travis AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Weeknd AI Model</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Legal</a></li>
+                                    <li class="mt-5  opacity-50"><a class="mx-5" href="">Terms of Use</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Privacy Policy</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Refund Policy</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="text-center border-t mt-5 border-gray-500 w-2/3">
+                        <p class="text-gray text-sm mt-4">© Copyright 2023 - ITale . Ai LTD</p>
+                    </div>
+                </div>
+            </div>
+        </Footer>
+    </div>
+
+    <script src="./assets/script/script.js"></script>
+    <script>
+        function menuToggle() {
+            var x = document.getElementById("mobile-menu");
+            x.style.width = "100%";
+        }
+        function menuClose() {
+            var x = document.getElementById("mobile-menu");
+            x.style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
