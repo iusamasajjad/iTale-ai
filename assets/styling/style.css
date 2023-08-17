@@ -90,6 +90,9 @@ Footer {
   overflow-x: hidden;
   transition: 0.5s;
 }
+.disply-none{
+  display: none;
+}
 
 /* ============= caousel ================= */
 .wrapper {
@@ -253,6 +256,7 @@ button {
 .slide-item img{
   height: 400px;
 }
+
 
 /* ================== media-quries =============== */
 

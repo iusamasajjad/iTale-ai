@@ -92,10 +92,10 @@
         <div>
             <div class="text-white flex justify-center container mx-auto">
                 <div class="text-center relative my-28 w-4/5">
-                    <div class="absolute right-36 top-0"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
-                    <div class="absolute right-0 top-5"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute right-36 lg:top-0 top-[-20px]"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
+                    <div class="absolute right-0 lg:top-5 top-10"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
                     <div class="absolute left-0 top-10"><img class="w-4" src="./assets/images/Star.png" alt=""></div>
-                    <div class="absolute right-0 top-20"><img class="w-8" src="./assets/images/Star-1.png" alt=""></div>
+                    <div class="absolute right-0 lg:top-20 top-32"><img class="w-8" src="./assets/images/Star-1.png" alt=""></div>
                     <div class="absolute left-14 top-[-50px]"><img class="w-8" src="./assets/images/Star-3.png" alt="">
                     </div>
                     <p class="lg:text-xl text-gray">The #1 Platform for making high quality AI Stories in seconds!</p>
@@ -142,7 +142,7 @@
                     <div class="box">
                         <img class="w-3/5" src="./assets/images/elon.png" alt="">
                     </div>
-                    <div class="box">
+                    <div class="box middle-item">
                         <img class="w-3/5" src="./assets/images/donald.png" alt="">
                     </div>
                     <div class="box">
@@ -426,16 +426,17 @@
                 <div>
                     <h2 class="text-white text-4xl gilmer-bold">Frequently asked questions</h2>
                 </div>
-                <div class="flex border-b border-slate-700 items-center mt-6">
+                <div onclick="toggle1()" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
                     <div>
-                        <p class="text-xl gilmer-bold text-red">-</p>
+                        <p id="plusicon-hide" class="text-xl hidden gilmer-bold text-red">+</p>
+                        <p id="minusicon-hide" class="text-xl gilmer-bold text-red">-</p>
                     </div>
                     <div class="ml-3">
                         <p class="text-white">Can I cancel my plan at any time?</p>
                     </div>
                     <div class="border-b border-slate-700 mt-16"></div>
                 </div>
-                <div class="mt-5">
+                <div id="toggle-1"  class="mt-5">
                     <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
                 </div>
                 <div class="flex border-b border-slate-700 items-center mt-6">
@@ -479,10 +480,10 @@
                             </div>
                             <div class="mt-8">
                                 <p class="text-white">Social Media</p>
-                                <div class="flex gap-1">
-                                    <div><img class="w-12" src="./assets/images/instagram.png" alt=""></div>
-                                    <div><img class="w-12" src="./assets/images/youtube.png" alt=""></div>
-                                    <div><img class="w-12" src="./assets/images/titok.png" alt=""></div>
+                                <div class="flex gap-3 mt-2">
+                                    <div><img class="w-6" src="./assets/images/insta.png" alt=""></div>
+                                    <div><img class="w-6" src="./assets/images/youtube-1.png" alt=""></div>
+                                    <div><img class="w-6" src="./assets/images/tik-tok.png" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -524,7 +525,7 @@
 
                 <div class="flex justify-center">
                     <div class="text-center border-t mt-5 border-gray-500 w-2/3">
-                        <p class="text-gray text-sm mt-4">© Copyright 2023 - ITale . Ai LTD</p>
+                        <p class="text-gray text-sm mt-4">© Copyright 2023 - iTale.ai</p>
                     </div>
                 </div>
             </div>
@@ -541,6 +542,23 @@
             var x = document.getElementById("mobile-menu");
             x.style.width = "0%";
         }
+
+        function toggle1() {
+            let iconShow = document.getElementById("plusicon-hide");
+            let iconHide = document.getElementById("minusicon-hide");
+            let toggleDiv = document.getElementById("toggle-1");
+            if (toggleDiv.classList.contains("disply-none")) {
+                toggleDiv.classList.remove("disply-none");
+                iconShow.style.display = "none";
+                iconHide.style.display = "flex";
+            }
+            else {
+                toggleDiv.classList.add("disply-none");
+                iconShow.style.display = "flex";
+                iconHide.style.display = "none";
+            }
+        }
+        
 
 
         var getIndex = function(el) {
