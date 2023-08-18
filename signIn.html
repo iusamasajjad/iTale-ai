@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./assets/styling/style.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script>
+            // no import necessary
+            gsap.to("body", { backgroundColor: "red", duration: 3 });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+        <title>iTale.ai</title>
+    </head>
+<body>
+    <div>
+         <!-- ===================== sign-In ======================= -->
+
+         <div class="container mx-auto px-4 lg:px-0 py-10">
+            <div>
+                <p class="text-white text-4xl gilmer-medium">Login to iTale.ai</p>
+            </div>
+            <div>
+                <div class="mx-3 lg:mx-0">
+                    <div class="my-10">
+                        <p class="text-white gilmer-regular text-2xl">Email</p>
+                        <div class="light-bg mt-3 flex justify-between w-full py-4 px-5">
+                            <input class="bg-transparent text-white w-full outline-none" type="text"
+                                placeholder="Enter Your Email">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-white gilmer-regular text-2xl">Password</p>
+                        <div class="light-bg mt-3 flex justify-between w-full py-4 px-5">
+                            <input class="bg-transparent text-white w-full outline-none" type="password"
+                                placeholder="Enter Your Password">
+                        </div>
+                        <p class="text-white  gilmer-regular pt-4">Forget Password?</p>
+                    </div>
+                    <div class=" mt-10 w-full">
+                        <button class="rounded-xl px-16 py-5 w-full red-bg text-white">SIgn In</button>
+                    </div>
+                </div>
+                <div class="flex mt-10 justify-center">
+                    <div class="flex items-center gap-4 w-5/6">
+                        <div class="border-slate-700 w-1/2 border-b "></div>
+                        <p class="text-white">or</p>
+                        <div class="border-slate-700 border-b w-1/2"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class=" px-4 flex justify-center mt-10 items-center gap-5 py-4 light-bg text-white">
+                        <p class="gilmer-bold text-xl">G</p>
+                        <p class="text-white gilmer-regular">Continue With Google</p>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <p class="text-gray">Don’t have an account? <span class="text-red">Sign Up</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
