@@ -78,6 +78,13 @@ Footer {
   box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.25);
 }
 
+.green-circle {
+  width: 6px;
+  height: 6px;
+  background-color: #089A28;
+  border-radius: 100%;
+}
+
 .overlay {
   position: fixed;
   height: 100%;
@@ -90,7 +97,8 @@ Footer {
   overflow-x: hidden;
   transition: 0.5s;
 }
-.disply-none{
+
+.disply-none {
   display: none;
 }
 
@@ -171,6 +179,7 @@ button {
   position: relative;
   overflow: hidden;
 }
+
 .slider .slide-item {
   position: absolute;
   width: 32%;
@@ -179,25 +188,32 @@ button {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .slider .slide-item.active {
   left: 0;
   position: relative;
 }
-.slider .slide-item.active + .slide-item {
+
+.slider .slide-item.active+.slide-item {
   left: 34%;
   position: absolute;
 }
-.slider .slide-item.active + .slide-item + .slide-item {
+
+.slider .slide-item.active+.slide-item+.slide-item {
   position: absolute;
   left: 68%;
 }
-.slider .slide-item.active + .slide-item + .slide-item ~ .slide-item {
+
+.slider .slide-item.active+.slide-item+.slide-item~.slide-item {
   left: 100%;
 }
+
 .slider .slide-item img {
   width: 100%;
 }
-.slider .controls .left, .slider .controls .right {
+
+.slider .controls .left,
+.slider .controls .right {
   width: 20px;
   height: 15px;
   color: #fff;
@@ -210,12 +226,15 @@ button {
   -webkit-transform: translateY(-50%) scaleY(1.5);
   transform: translateY(-50%) scaleY(1.5);
 }
+
 .slider .controls .left {
   left: 0;
 }
+
 .slider .controls .right {
   right: 0;
 }
+
 .slider .indicators {
   position: absolute;
   bottom: 3%;
@@ -223,6 +242,7 @@ button {
   text-align: center;
   z-index: 10;
 }
+
 .slider .indicators .item {
   display: inline-block;
   /* background-color: #ececea; */
@@ -234,10 +254,12 @@ button {
   position: relative;
   cursor: pointer;
 }
+
 .slider .indicators .item.active-item {
   /* background-color: rgba(0, 0, 0, 0);
   border-color: #ffcf00; */
 }
+
 .slider .indicators .item.active-item:after {
   content: "";
   width: 10px;
@@ -253,7 +275,8 @@ button {
   top: 10%;
   color: #ffcf00;
 }
-.slide-item img{
+
+.slide-item img {
   height: 400px;
 }
 
@@ -265,7 +288,8 @@ button {
     width: 100%;
     height: 200px;
   }
-  .slide-item img{
+
+  .slide-item img {
     height: 200px;
   }
 }
@@ -275,7 +299,8 @@ button {
     width: 100%;
     height: 300px;
   }
-  .slide-item img{
+
+  .slide-item img {
     height: 200px;
   }
 }
@@ -285,10 +310,10 @@ button {
     width: 100%;
     height: 300px;
   }
-  .slide-item img{
+
+  .slide-item img {
     height: 200px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {}
-
