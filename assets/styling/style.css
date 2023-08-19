@@ -168,8 +168,8 @@ button {
   overflow: visible;
 }
 
-.middle-item img {
-  width: 100%;
+.middle-item .image {
+  width: 100% !important;
   height: 600px;
 }
 
