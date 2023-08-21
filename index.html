@@ -108,7 +108,7 @@
                     </div>
                     <div class="flex mt-7 justify-center items-center">
                         <div>
-                            <button class="rounded-xl px-8 py-2  red-bg text-white">Get Started</button>
+                            <button class="rounded-xl px-20 py-4 text-xl red-bg text-white">Get Started</button>
                         </div>
                     </div>
                     <div class="flex mt-10 relative justify-center">
@@ -139,14 +139,11 @@
                     <button class="prev outline-none"><img src="./assets/images/arrow-back.png" alt=""></button>
                     <button class="next"><img src="./assets/images/arrow-next.png" alt=""></button>
                 </div>
-                <button class="toggle">toggle overflow</button>
+                <button class="toggle hidden">toggle overflow</button>
                 <div class="wrapper">
                     <div class="box">
                         <div class="w-3/5 image lg:h-96 h-36 flex justify-center" style="background-image: url('./assets/images/elon.png');
                              background-size: contain; background-repeat: no-repeat; width: 70%;">
-                            <!-- <div class="flex justify-center lg:px-8 pb-5 items-end h-full">
-                                <p class="text-white lg:text-2xl text-xs text-center gilmer-medium">Elon Mask and the Big Race</p>
-                            </div> -->
                         </div>
                     </div>
                     <div class="box middle-item">
@@ -447,45 +444,65 @@
                 <div>
                     <h2 class="text-white text-4xl gilmer-bold">Frequently asked questions</h2>
                 </div>
-                <div onclick="toggle1()" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
-                    <div>
-                        <p id="plusicon-hide" class="text-xl hidden gilmer-bold text-red">+</p>
-                        <p id="minusicon-hide" class="text-xl gilmer-bold text-red">-</p>
+                <div id="q1">
+                    <div onclick="toggle1(event)" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
+                        <div class="z-[-1]">
+                            <p  class="plusicon-hide text-xl  gilmer-bold text-red">+</p>
+                            <p  class="minusicon-hide text-xl hidden gilmer-bold text-red">-</p>
+                        </div>
+                        <div class="ml-3 z-[-1]">
+                            <p class="text-white">Can I cancel my plan at any time?</p>
+                        </div>
+                        <div class="border-b border-slate-700 mt-16"></div>
                     </div>
-                    <div class="ml-3">
-                        <p class="text-white">Can I cancel my plan at any time?</p>
+                    <div  class="toggle-1 mt-5 disply-none">
+                        <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
                     </div>
-                    <div class="border-b border-slate-700 mt-16"></div>
                 </div>
-                <div id="toggle-1"  class="mt-5">
-                    <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
+                <div id="q2">
+                    <div onclick="toggle1(event)" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
+                        <div class="z-[-1]">
+                            <p  class="plusicon-hide text-xl  gilmer-bold text-red">+</p>
+                            <p  class="minusicon-hide text-xl hidden gilmer-bold text-red">-</p>
+                        </div>
+                        <div class="ml-3 z-[-1]">
+                            <p class="text-white">Are credits a one time purchase?</p>
+                        </div>
+                        <div class="border-b border-slate-700 mt-16"></div>
+                    </div>
+                    <div  class="toggle-1 mt-5 disply-none">
+                        <p class="text-gray">Yes! You can purchase credits a one time  from the settings page.</p>
+                    </div>
                 </div>
-                <div class="flex border-b border-slate-700 items-center mt-6">
-                    <div>
-                        <p class="text-xl gilmer-bold text-red">+</p>
+                <div id="q3">
+                    <div onclick="toggle1(event)" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
+                        <div class="z-[-1]">
+                            <p  class="plusicon-hide text-xl  gilmer-bold text-red">+</p>
+                            <p  class="minusicon-hide text-xl hidden gilmer-bold text-red">-</p>
+                        </div>
+                        <div class="ml-3 z-[-1]">
+                            <p class="text-white">Which plans allow me to create custom models?</p>
+                        </div>
+                        <div class="border-b border-slate-700 mt-16"></div>
                     </div>
-                    <div class="ml-3">
-                        <p class="text-white">Are credits a one time purchase?</p>
+                    <div  class="toggle-1 mt-5 disply-none">
+                        <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
                     </div>
-                    <div class="border-b border-slate-700 mt-16"></div>
                 </div>
-                <div class="flex border-b border-slate-700 items-center mt-6">
-                    <div>
-                        <p class="text-xl gilmer-bold text-red">+</p>
+                <div id="q4">
+                    <div onclick="toggle1(event)" class="flex cursor-pointer border-b border-slate-700 items-center mt-6">
+                        <div class="z-[-1]">
+                            <p  class="plusicon-hide text-xl  gilmer-bold text-red">+</p>
+                            <p  class="minusicon-hide text-xl hidden gilmer-bold text-red">-</p>
+                        </div>
+                        <div class="ml-3 z-[-1]">
+                            <p class="text-white">What is the essential Al vocal tool kit?</p>
+                        </div>
+                        <div class="border-b border-slate-700 mt-16"></div>
                     </div>
-                    <div class="ml-3">
-                        <p class="text-white">Which plans allow me to create custom models?</p>
+                    <div  class="toggle-1 mt-5 disply-none">
+                        <p class="text-gray">Yes! You can cancel your plan at any time from the settings page.</p>
                     </div>
-                    <div class="border-b border-slate-700 mt-16"></div>
-                </div>
-                <div class="flex border-b border-slate-700 items-center mt-6">
-                    <div>
-                        <p class="text-2xl gilmer-medium text-red">+</p>
-                    </div>
-                    <div class="ml-3">
-                        <p class="text-white">What is the essential Al vocal tool kit?</p>
-                    </div>
-                    <div class="border-b border-slate-700 mt-16"></div>
                 </div>
             </div>
         </div>
@@ -555,32 +572,7 @@
     </div>
     <script src="./assets/script/script.js"></script>
     <script>
-        function menuToggle() {
-            var x = document.getElementById("mobile-menu");
-            x.style.width = "100%";
-        }
-        function menuClose() {
-            var x = document.getElementById("mobile-menu");
-            x.style.width = "0%";
-        }
-
-        function toggle1() {
-            let iconShow = document.getElementById("plusicon-hide");
-            let iconHide = document.getElementById("minusicon-hide");
-            let toggleDiv = document.getElementById("toggle-1");
-            if (toggleDiv.classList.contains("disply-none")) {
-                toggleDiv.classList.remove("disply-none");
-                iconShow.style.display = "none";
-                iconHide.style.display = "flex";
-            }
-            else {
-                toggleDiv.classList.add("disply-none");
-                iconShow.style.display = "flex";
-                iconHide.style.display = "none";
-            }
-        }
         
-
 
         var getIndex = function(el) {
 	arr = el.parentNode.children;

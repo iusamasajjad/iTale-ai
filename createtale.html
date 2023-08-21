@@ -14,6 +14,7 @@
         // no import necessary
         gsap.to("body", { backgroundColor: "red", duration: 3 });
     </script>
+    <script type="txt/javascript" src="./assets/script/script.js"></script>
 
 
     <title>iTale.ai</title>
@@ -38,7 +39,7 @@
                     <div>
                         <a href="./signIn.html">
                             <button class="rounded-xl px-8 py-2 bg-white text-black mx-8">Login</button>
-                            </a>
+                        </a>
                         <button class="rounded-xl px-8 py-2  red-bg text-white">Sign Up</button>
                     </div>
                 </div>
@@ -93,7 +94,24 @@
         <div class="container mx-auto px-4 lg:px-0 py-4 lg:py-0">
             <div class=" px-10 py-5 border-slate-700 rounded-2xl border border-solid">
                 <div class="flex my-3 items-center gap-2 justify-end">
-                    <div><img src="./assets/images/favourate.png" alt=""></div>
+                    <div onclick="favourite()">
+                        <div    class="light-bg cursor-pointer outnone rounded-full w-9 h-9 flex justify-center items-center">
+                            <svg id="icon-fill" class="icon-fill fill-red"  xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 20 20">
+                                <g clip-path="url(#clip0_78_3001)">
+                                    <path
+                                        d="M9.56301 4.71617L10.0005 5.50656L10.4379 4.71617C10.8397 3.99029 11.4259 3.38327 12.1373 2.95642C12.8445 2.53209 13.6506 2.30075 14.475 2.28535C15.8002 2.34681 17.0479 2.92822 17.9474 3.90382C18.8502 4.88305 19.3288 6.17979 19.2786 7.51075L19.2782 7.52017V7.5296C19.2782 9.21754 18.383 11.0466 17.0217 12.8347C15.6695 14.6109 13.9079 16.2814 12.2865 17.6413L12.2862 17.6416C11.646 18.1796 10.8367 18.4745 10.0005 18.4745C9.16429 18.4745 8.3549 18.1796 7.71474 17.6416L7.71439 17.6413C6.09307 16.2814 4.33146 14.6109 2.97921 12.8347C1.61796 11.0466 0.722695 9.21754 0.722695 7.5296V7.52017L0.722339 7.51075C0.672117 6.17979 1.1507 4.88305 2.05353 3.90382C2.95302 2.92822 4.20078 2.34681 5.52594 2.28535C6.35036 2.30075 7.15643 2.53209 7.86364 2.95642C8.57506 3.38327 9.16125 3.99029 9.56301 4.71617Z"
+                                        stroke="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_78_3001">
+                                        <rect width="19.5556" height="19.5556" fill="white"
+                                            transform="translate(0.222656 0.222656)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
                     <div>
                         <p class="text-white">334</p>
                     </div>
@@ -119,31 +137,61 @@
 
 
         <!-- =============== select-category ================== -->
-
         <div class="container mx-auto my-10 ">
             <div class="mx-3 lg:mx-0">
                 <p class="text-white text-2xl gilmer-regular">Select Category</p>
-                <div class="flex flex-col lg:flex-row gap-3 my-3 ">
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4  red-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl pr-12">quirky</p>
-                        <img class="w-4" src="./assets/images/white-tick.png" alt="">
+                <div id="activeWrapper">
+                    <div class="flex flex-col lg:flex-row gap-3 my-3 ">
+                        <div id="select1">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                quirky
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
+                        <div id="select2">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                funny
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
+                        <div id="select3">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                action
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
+                        <div id="select4">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                Anime
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
                     </div>
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4 light-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl pr-14">funny</p>
-                    </div>
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4 light-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl pr-14">action</p>
-                    </div>
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4 light-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl pr-14">Anime</p>
-                    </div>
-                </div>
-                <div class="flex flex-col lg:flex-row gap-3 my-3">
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4 light-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl">Newspaper Cartoon</p>
-                    </div>
-                    <div class="rounded-xl px-4 flex items-center justify-between py-4 light-bg text-white">
-                        <p class="text-white uppercase gilmer-regular text-xl">Pencil Drawing</p>
+                    <div class="flex flex-col lg:flex-row gap-3 my-3">
+                        <div id="select5">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl lg:pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                Newspaper Cartoon
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
+                        <div id="select6">
+                            <button onclick="toggleActive(event)"
+                                class="rounded-xl w-full relative toggle-1 inset-0 activeBtn btn uppercase gilmer-regular text-xl pr-28 pl-5 py-4 text-start flex items-center justify-between  light-bg text-white">
+                                Pencil Drawing
+                                <img class="w-4 tickIcon absolute right-3 disply-none"
+                                    src="./assets/images/white-tick.png" alt="">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,7 +212,7 @@
                     </div>
                 </div>
                 <div class="flex justify-end mt-5">
-                    <button class="rounded-xl px-16 py-2  red-bg text-white">Generate</button>
+                    <button class="rounded-xl px-20 py-4 text-xl gilmer-regular red-bg text-white">Generate</button>
                 </div>
             </div>
         </div>
@@ -232,104 +280,79 @@
                 </div>
             </div>
             <div class="controls">
-                         <div class="left">< </div>
+                <div class="left">
+                    < </div>
                         <div class="right">></div>
                         <ul class="indicators"></ul>
                 </div>
             </div>
         </div>
-  <!-- ===================== footer ======================== -->
+        <!-- ===================== footer ======================== -->
 
-  <Footer class=" py-16">
-    <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row justify-between">
-            <div class="lg:w-3/5 flex justify-center lg:justify-start text-center lg:text-start py-4">
-                <div>
-                    <div><img class="mx-auto lg:mx-0" width="96" src="./assets/images/iTale.ai.png" alt="logo">
-                    </div>
-                    <div class="mt-8">
-                        <p class="text-white">Social Media</p>
-                        <div class="flex gap-3 mt-2">
-                            <div><img class="w-6" src="./assets/images/insta.png" alt=""></div>
-                            <div><img class="w-6" src="./assets/images/youtube-1.png" alt=""></div>
-                            <div><img class="w-6" src="./assets/images/tik-tok.png" alt=""></div>
+        <Footer class=" py-16">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="lg:w-3/5 flex justify-center lg:justify-start text-center lg:text-start py-4">
+                        <div>
+                            <div><img class="mx-auto lg:mx-0" width="96" src="./assets/images/iTale.ai.png" alt="logo">
+                            </div>
+                            <div class="mt-8">
+                                <p class="text-white">Social Media</p>
+                                <div class="flex gap-3 mt-2">
+                                    <div><img class="w-6" src="./assets/images/insta.png" alt=""></div>
+                                    <div><img class="w-6" src="./assets/images/youtube-1.png" alt=""></div>
+                                    <div><img class="w-6" src="./assets/images/tik-tok.png" alt=""></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="2/5">
+                        <nav class="flex lg:gap-6 flex-col text-center lg:text-start lg:flex-row justify-around">
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Links</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Pricing</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Login</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Sign Up</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">Forgot Password</a></li>
+                                    <li class="my-5 opacity-50"><a class="mx-5" href="">History</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">AI Models</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Drizzy AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Juice AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Kanye AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Ariana AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Travis AI Model</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Weeknd AI Model</a></li>
+                                </div>
+                            </ul>
+                            <ul class=" py-3">
+                                <div class="text-white text-sm">
+                                    <li><a class="mx-5 text-xl gilmer-medium" href="">Legal</a></li>
+                                    <li class="mt-5  opacity-50"><a class="mx-5" href="">Terms of Use</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Privacy Policy</a></li>
+                                    <li class="mt-5 opacity-50"><a class="mx-5" href="">Refund Policy</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="text-center border-t mt-5 border-gray-500 w-2/3">
+                        <p class="text-gray text-sm mt-4">© Copyright 2023 - iTale.ai</p>
                     </div>
                 </div>
             </div>
-            <div class="2/5">
-                <nav class="flex lg:gap-6 flex-col text-center lg:text-start lg:flex-row justify-around">
-                    <ul class=" py-3">
-                        <div class="text-white text-sm">
-                            <li><a class="mx-5 text-xl gilmer-medium" href="">Links</a></li>
-                            <li class="my-5 opacity-50"><a class="mx-5" href="">Pricing</a></li>
-                            <li class="my-5 opacity-50"><a class="mx-5" href="">Login</a></li>
-                            <li class="my-5 opacity-50"><a class="mx-5" href="">Sign Up</a></li>
-                            <li class="my-5 opacity-50"><a class="mx-5" href="">Forgot Password</a></li>
-                            <li class="my-5 opacity-50"><a class="mx-5" href="">History</a></li>
-                        </div>
-                    </ul>
-                    <ul class=" py-3">
-                        <div class="text-white text-sm">
-                            <li><a class="mx-5 text-xl gilmer-medium" href="">AI Models</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Drizzy AI Model</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Juice AI Model</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Kanye AI Model</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Ariana AI Model</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Travis AI Model</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Weeknd AI Model</a></li>
-                        </div>
-                    </ul>
-                    <ul class=" py-3">
-                        <div class="text-white text-sm">
-                            <li><a class="mx-5 text-xl gilmer-medium" href="">Legal</a></li>
-                            <li class="mt-5  opacity-50"><a class="mx-5" href="">Terms of Use</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Privacy Policy</a></li>
-                            <li class="mt-5 opacity-50"><a class="mx-5" href="">Refund Policy</a></li>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="flex justify-center">
-            <div class="text-center border-t mt-5 border-gray-500 w-2/3">
-                <p class="text-gray text-sm mt-4">© Copyright 2023 - iTale.ai</p>
-            </div>
-        </div>
-    </div>
-</Footer>
+        </Footer>
 
     </div>
     <script src="./assets/script/script.js"></script>
     <script>
-        function menuToggle() {
-            var x = document.getElementById("mobile-menu");
-            x.style.width = "100%";
-        }
-        function menuClose() {
-            var x = document.getElementById("mobile-menu");
-            x.style.width = "0%";
-        }
-
-        function toggle1() {
-            let iconShow = document.getElementById("plusicon-hide");
-            let iconHide = document.getElementById("minusicon-hide");
-            let toggleDiv = document.getElementById("toggle-1");
-            if (toggleDiv.classList.contains("disply-none")) {
-                toggleDiv.classList.remove("disply-none");
-                iconShow.style.display = "none";
-                iconHide.style.display = "flex";
-            }
-            else {
-                toggleDiv.classList.add("disply-none");
-                iconShow.style.display = "flex";
-                iconHide.style.display = "none";
-            }
-        }
-
-
-
+       
         var getIndex = function (el) {
             arr = el.parentNode.children;
             for (var i = 0, n = arr.length; i < n; i++) {

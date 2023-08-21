@@ -46,10 +46,19 @@ body {
 .red-bg {
   background: #B2073F;
 }
-
+.outnone{
+  outline: none !important;
+}
+.fill-red{
+  fill: #B2073F;
+}
+.activeBtn{
+  background: #B2073F;
+}
 .light-bg {
   background: #222029;
 }
+
 
 .bg-pink {
   background: linear-gradient(160deg, #B00A4D 0%, #8E1547 53.61%, #A02456 100%);
@@ -100,6 +109,11 @@ Footer {
 
 .disply-none {
   display: none;
+}
+
+
+.disply-block{
+  display: block;
 }
 
 /* ============= caousel ================= */

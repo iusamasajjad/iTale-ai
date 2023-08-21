@@ -26,7 +26,8 @@ document
   .querySelector(".prev")
   .addEventListener("click", () => {
     loop.previous({ duration: 0.4, ease: "power1.inOut" });
-                    console.log(loop.current())}
+    console.log(loop.current())
+  }
   );
 
 // HELPER FUNCTION TO SELECT MIDDLE ITEM
@@ -36,29 +37,16 @@ function setMiddle(mid) {
   boxes[wrapper(mid)].classList.add("middle-item");
 }
 
-/*
-This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
-Features:
- - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
- - When each item animates to the left or right enough, it will loop back to the other side
- - Optionally pass in a config object with values like draggable: true, speed (default: 1, which travels at roughly 100 pixels per second), paused (boolean), repeat, reversed, and paddingRight.
- - The returned timeline will have the following methods added to it:
-   - next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-   - current() - returns the current index (if an animation is in-progress, it reflects the final index)
-   - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
- */
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
   let tl = gsap.timeline({
-      repeat: config.repeat,
-      paused: config.paused,
-      defaults: { ease: "none" },
-      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
-    }),
+    repeat: config.repeat,
+    paused: config.paused,
+    defaults: { ease: "none" },
+    onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
+  }),
     length = items.length,
     startX = items[0].offsetLeft,
     times = [],
@@ -72,7 +60,7 @@ function horizontalLoop(items, config) {
         widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
         xPercents[i] = snap(
           (parseFloat(gsap.getProperty(el, "x", "px")) / widths[i]) * 100 +
-            gsap.getProperty(el, "xPercent")
+          gsap.getProperty(el, "xPercent")
         );
       }),
     getTotalWidth = () =>
@@ -80,7 +68,7 @@ function horizontalLoop(items, config) {
       (xPercents[length - 1] / 100) * widths[length - 1] -
       startX +
       items[length - 1].offsetWidth *
-        gsap.getProperty(items[length - 1], "scaleX") +
+      gsap.getProperty(items[length - 1], "scaleX") +
       (parseFloat(config.paddingRight) || 0),
     totalWidth,
     curX,
@@ -207,4 +195,60 @@ function horizontalLoop(items, config) {
   }
 
   return tl;
+}
+
+
+
+
+// FAQ functions-Methods ===============
+
+function toggle1(e) {
+  var product = e.target.parentElement;
+  let iconShow = product.getElementsByClassName("plusicon-hide")[0];
+  let iconHide = product.getElementsByClassName("minusicon-hide")[0];
+  let toggleDiv = product.getElementsByClassName("toggle-1")[0];
+  if (toggleDiv.classList.contains("disply-none")) {
+    toggleDiv.classList.remove("disply-none");
+    iconShow.style.display = "none";
+    iconHide.style.display = "flex";
+  }
+  else {
+    toggleDiv.classList.add("disply-none");
+    iconShow.style.display = "flex";
+    iconHide.style.display = "none";
+  }
+}
+// ========== select-category-function 
+function toggleActive(e) {
+  console.log("event", e);
+  var product = e.target.parentElement;
+  let iconShow = product.getElementsByClassName("tickIcon")[0];
+  let toggleDiv = product.getElementsByClassName("toggle-1")[0];
+  if (toggleDiv.classList.contains("light-bg")) {
+    toggleDiv.classList.remove("light-bg");
+    iconShow.style.display = "block";
+  }
+  else {
+    toggleDiv.classList.add("light-bg");
+    iconShow.style.display = "none";
+  }
+}
+// =========== favourite-icon-active
+function favourite() {
+  let toggleDiv = document.getElementById("icon-fill");
+  if (toggleDiv.classList.contains("fill-red")) {
+    toggleDiv.classList.remove("fill-red");
+  }
+  else {
+    toggleDiv.classList.add("fill-red");
+  }
+}
+
+function menuToggle() {
+  var x = document.getElementById("mobile-menu");
+  x.style.width = "100%";
+}
+function menuClose() {
+  var x = document.getElementById("mobile-menu");
+  x.style.width = "0%";
 }
