@@ -252,3 +252,4 @@ function menuClose() {
   var x = document.getElementById("mobile-menu");
   x.style.width = "0%";
 }
+

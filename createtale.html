@@ -199,9 +199,10 @@
             <div class="mx-3 lg:mx-0">
                 <div class="my-10">
                     <p class="text-white gilmer-regular">Add Your Own Tags</p>
-                    <div class="light-bg mt-3 flex justify-between lg:w-1/2 w-full py-4 px-5">
-                        <input class="bg-transparent text-white w-full outline-none" type="text"
-                            placeholder="Write here">
+                    <div class="light-bg flex items-center flex-wrap mt-3 flex justify-between lg:w-1/2 w-full py-4 px-5">
+                        <input class="bg-transparent text-white w-full outline-none" type="text" placeholder="Write here" id="hashtags" autocomplete="off">
+                      </div>
+                      <div class="tag-container">
                     </div>
                 </div>
                 <div>
@@ -434,6 +435,33 @@
         window.addEventListener('load', function () {
             setSlider(document.getElementsByClassName('slider')[0])
         });
+
+        // ======== hash-tag-code =============
+
+let input, hashtagArray, container, t;
+
+input = document.querySelector('#hashtags');
+container = document.querySelector('.tag-container');
+hashtagArray = [];
+
+input.addEventListener('keyup', () => {
+    if (event.which == 13 && input.value.length > 0) {
+      var text = document.createTextNode(input.value);
+      var p = document.createElement('p');
+      container.appendChild(p);
+      p.appendChild(text);
+      p.classList.add('tag');
+      input.value = '';
+      
+      let deleteTags = document.querySelectorAll('.tag');
+      
+      for(let i = 0; i < deleteTags.length; i++) {
+        deleteTags[i].addEventListener('click', () => {
+          container.removeChild(deleteTags[i]);
+        });
+      }
+    }
+});
 
     </script>
 </body>

@@ -116,6 +116,15 @@ Footer {
   display: block;
 }
 
+
+/* ============== background-images ========= */
+
+.view-tale-bg{
+  background-image: url('../images/viw-bg.png');
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* ============= caousel ================= */
 .wrapper {
   height: 20%;
@@ -362,6 +371,101 @@ button {
   padding-bottom: 100%;
 }
 
+/* ============ add-hash-tag-section  ============ */
+
+
+
+.tag-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tag{
+  pointer-events: none;
+  background-color: #242424;
+  color: white;
+  padding: 6px;
+  margin: 5px;
+}
+
+.tag::before {
+  pointer-events: all;
+  display: inline-block;
+  content: 'x';  
+  height: 25px;
+  width: 20px;
+  margin-right: 6px;
+  text-align: center;
+  color: #ccc;
+  background-color: #111;
+  cursor: pointer;
+}
+/* ============= popup-section ================ */
+.popup {
+  /* display: none; */
+  position: fixed;
+  padding: 10px;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  background: #222029;
+  margin-top: -100px;
+  z-index: 100;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+.popupk {
+  /* display: none; */
+  position: fixed;
+  padding: 10px;
+  left: 50%;
+  width: 500px;
+  margin-left: -150px;
+  top: 50%;
+  background: #222029;
+  margin-top: -100px;
+  z-index: 100;
+}
+
+#popupk:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+
+#popupk:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 /* ================== media-quries =============== */
 
 @media (min-width: 320px) and (max-width: 480px) {
